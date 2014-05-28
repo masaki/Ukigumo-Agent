@@ -2,6 +2,12 @@ Revision history for Perl extension Ukigumo::Agent
 
 {{$NEXT}}
 
+v0.1.6_01
+
+    - Accept config file at ukigumo-agent
+    - Accept force_git_url parameter
+    - Enable client nodes
+
 v0.1.6 2014-05-02T03:50:38Z
 
     - Fix tests (for http://www.cpantesters.org/cpan/report/3686bd7c-d107-11e3-b552-b2fee0bfc7aa and more)
