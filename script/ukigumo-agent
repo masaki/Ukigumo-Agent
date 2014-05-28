@@ -45,7 +45,8 @@ $config->{force_git_url}      = $force_git_url      if defined $force_git_url;
 pod2usage() unless $config->{work_dir};
 pod2usage() unless $config->{server_url};
 
-my $manager = Ukigumo::Agent::Manager->new(config => $config);
+my $nodes = delete $config->{client_nodes} // [];
+my $manager = Ukigumo::Agent::Manager->new(config => $config, client_nodes => $nodes);
 Ukigumo::Agent->register_manager($manager);
 
 my $static_dir = File::Spec->catdir(Ukigumo::Agent->share_dir, 'static');

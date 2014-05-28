@@ -51,6 +51,20 @@
                 </section>
 
                 <section>
+                <div class="page-header">
+                    <h2>Client Nodes</h2>
+                </div>
+            [% IF client_nodes.size() > 0 %]
+                <table class="table">
+                <tr><th>Host</th><th>OS</th><th>Arch</th></tr>
+            [% FOR node IN client_nodes %]
+                <tr><td>[% node.host %]</td><td>[% node.os %]</td><td>[% node.arch %]</td></tr>
+            [% END %]
+                </table>
+            [% END %]
+                </section>
+
+                <section>
                     <div class="page-header">
                         <h2>Server status</h2>
                     </div>

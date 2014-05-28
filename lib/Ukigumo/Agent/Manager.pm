@@ -74,6 +74,12 @@ has 'children' => (
     default => sub { +{} },
 );
 
+has 'client_nodes' => (
+    is      => 'rw',
+    isa     => 'ArrayRef',
+    default => sub { +[] },
+);
+
 has 'logger' => (
     is      => 'ro',
     isa     => 'Ukigumo::Logger',
